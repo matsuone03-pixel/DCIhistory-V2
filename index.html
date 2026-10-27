@@ -93,6 +93,25 @@
             background: var(--text-main); color: #000;
         }
 
+        .future-note {
+            max-width: 640px; margin: 0 auto 90px; text-align: center;
+            border: 1px solid var(--accent-gold); border-radius: 12px;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 34px 30px 30px; position: relative; z-index: 1;
+        }
+        .future-year {
+            font-family: var(--font-heading); font-weight: 700; font-size: 1.6rem;
+            color: var(--accent-gold); letter-spacing: 4px;
+        }
+        .future-title {
+            font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase;
+            color: var(--text-muted); margin: 8px 0 16px;
+        }
+        .future-corps {
+            font-family: var(--font-heading); font-size: 1.25rem; color: #fff; line-height: 1.9;
+        }
+        .future-note p { font-size: 0.9rem; color: #aaa; margin-top: 14px; }
+
         /* --- 3. CHAMPION TREE (v4.1 Style) --- */
         #view-tree { display: block; padding: 80px 20px; max-width: 900px; margin: 0 auto; position: relative; }
 
@@ -238,6 +257,12 @@
     </header>
 
     <div id="view-tree">
+        <div class="future-note">
+            <div class="future-year">2027</div>
+            <div class="future-title">New World Class Corps</div>
+            <div class="future-corps">Gold &nbsp;•&nbsp; The Battalion</div>
+            <p>Gold（San Diego）と The Battalion（Salt Lake City）が、2027年シーズンから World Class へ移行。DCI 加盟団体の投票により承認された。2026年の Open Class 選手権では The Battalion が2位、Gold が3位。</p>
+        </div>
         <div class="timeline-spine"></div>
         <div id="tree-root"></div>
     </div>
@@ -266,8 +291,10 @@
     </div>
 
     <script>
-        /* --- COMPLETE DATABASE (2000-2024) --- */
+        /* --- DATABASE (2000-2024 + 2026 CHAMPION) --- */
         const db = [
+            // 2026
+            { y: 2026, r: 1, c: "Bluecoats", s: "Gravity and Grace", sc: "99.100", d: "重力と優雅。無敗のシーズンで3度目の優勝、99点台は史上5例目。" },
             // 2024
             { y: 2024, r: 1, c: "Bluecoats", s: "Change Is Everything", sc: "98.750", d: "エントロピーと混沌。" },
             { y: 2024, r: 2, c: "Boston Crusaders", s: "Glitch", sc: "97.413", d: "不具合（Glitch）。" },
